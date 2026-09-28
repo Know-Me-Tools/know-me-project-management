@@ -2,6 +2,16 @@
 
 **A repeatable way to set up any project in the KnowMe working structure**, whether it's code, a business process, skill development, or research and docs. It works from scratch (greenfield) or converts an existing repository (brownfield).
 
+## Skills in this repo
+
+| Skill | What it does | Install |
+|---|---|---|
+| [`knowme-project-setup`](skills/knowme-project-setup/SKILL.md) | Greenfield setup or brownfield conversion of any project (code, business process, skill development, research or docs): OpenSpec for a multi-harness fleet, KBD orchestration, Prometheus context bootstrap, an agent team, UI/design tools and a branded docs site on GitHub Pages | `npx skills add Know-Me-Tools/know-me-project-management --skill knowme-project-setup` |
+
+Every skill lives at `skills/<name>/SKILL.md` and follows the [AgentSkills.io specification](https://agentskills.io/specification). Tools find skills by those `SKILL.md` files; this table is only for people browsing the repo. Claude Code users can also install through the plugin marketplace in `.claude-plugin/` (see [Install the skill](#install-the-skill)).
+
+---
+
 The work is packaged as one AgentSkills.io-compliant skill, [`skills/knowme-project-setup`](skills/knowme-project-setup/SKILL.md). This README records **every step that was taken** when the structure was first built, for [`know-me-decision`](https://github.com/Know-Me-Tools/know-me-decision) on 2026-09-28. For each step it explains what the step is for and which parts must change for other projects.
 
 ---
