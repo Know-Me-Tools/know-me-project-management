@@ -1,0 +1,29 @@
+{
+  "$comment": "Copy to website/content-sources.json. Classes: public (copied as-is), public-normalize (links and frontmatter rewritten), private-synthesis-only (never copied; may inform content/ pages), excluded (never read; links to it fail the build). Paths are relative to the repository root.",
+  "schema_version": 1,
+  "sources": [
+    {
+      "path": "docs/PLAYBOOK.md",
+      "classification": "public-normalize",
+      "dest": "playbook.md",
+      "frontmatter": {"sidebar_position": 3, "sidebar_label": "Build playbook"}
+    },
+    {
+      "path": "docs/research",
+      "classification": "public-normalize",
+      "dest": "research",
+      "frontmatter": {
+        "example-note.md": {"sidebar_position": 1, "sidebar_label": "Example note"}
+      }
+    },
+    {"path": "docs/architecture", "classification": "public", "static": "architecture"},
+    {"path": "docs/README.md", "classification": "private-synthesis-only"},
+    {"path": "docs/sessions", "classification": "excluded"},
+    {"path": ".prometheus", "classification": "excluded"},
+    {"path": ".agent-team", "classification": "excluded"},
+    {"path": ".kbd-orchestrator", "classification": "excluded"}
+  ],
+  "linkRewrites": {
+    "architecture/report.html": "pathname:///architecture/report.html"
+  }
+}
