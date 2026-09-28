@@ -2,8 +2,8 @@
 # Allowlist: deny everything, then admit the public sources from content-sources.json
 # (one `!` line each) and the site. Private paths are never admitted.
 **
-!__PUBLIC_SOURCE__
-!__PUBLIC_SOURCE__/**
+!README.md
+!skills/**
 !website/**
 website/node_modules
 website/build

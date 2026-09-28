@@ -2,6 +2,8 @@
 
 **A repeatable way to set up any project in the KnowMe working structure**, whether it's code, a business process, skill development, or research and docs. It works from scratch (greenfield) or converts an existing repository (brownfield).
 
+**Documentation site:** https://know-me-tools.github.io/know-me-project-management/
+
 ## Skills in this repo
 
 | Skill | What it does | Install |

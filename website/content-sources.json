@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "path": "README.md",
+      "classification": "public-normalize",
+      "dest": "guide.md",
+      "frontmatter": {
+        "sidebar_position": 2,
+        "sidebar_label": "Every step, explained",
+        "title": "Every step, explained",
+        "description": "The full record of the steps taken, why each exists, and which parts are parameters."
+      }
+    },
+    {
+      "path": "skills/knowme-project-setup/SKILL.md",
+      "classification": "public-normalize",
+      "dest": "skill-contract.md",
+      "frontmatter": {
+        "sidebar_position": 3,
+        "sidebar_label": "Skill contract (SKILL.md)",
+        "title": "Skill contract",
+        "description": "The knowme-project-setup SKILL.md as agents read it."
+      }
+    },
+    {
+      "path": "skills/knowme-project-setup/references",
+      "classification": "public-normalize",
+      "dest": "reference",
+      "frontmatter": {
+        "stages.md": {
+          "sidebar_position": 1,
+          "sidebar_label": "Stage contracts"
+        },
+        "brownfield.md": {
+          "sidebar_position": 2,
+          "sidebar_label": "Brownfield conversion"
+        },
+        "project-types.md": {
+          "sidebar_position": 3,
+          "sidebar_label": "Project types"
+        },
+        "team-archetypes.md": {
+          "sidebar_position": 4,
+          "sidebar_label": "Team archetypes"
+        },
+        "privacy-and-publishing.md": {
+          "sidebar_position": 5,
+          "sidebar_label": "Privacy and publishing"
+        },
+        "lessons.md": {
+          "sidebar_position": 6,
+          "sidebar_label": "Lessons"
+        }
+      }
+    },
+    {
+      "path": ".git",
+      "classification": "excluded"
+    },
+    {
+      "path": "node_modules",
+      "classification": "excluded"
+    }
+  ],
+  "linkRewrites": {
+    "skills/knowme-project-setup/references/stages.md": "./reference/stages.md",
+    "references/stages.md": "./reference/stages.md",
+    "skills/knowme-project-setup/references/brownfield.md": "./reference/brownfield.md",
+    "references/brownfield.md": "./reference/brownfield.md",
+    "skills/knowme-project-setup/references/project-types.md": "./reference/project-types.md",
+    "references/project-types.md": "./reference/project-types.md",
+    "skills/knowme-project-setup/references/team-archetypes.md": "./reference/team-archetypes.md",
+    "references/team-archetypes.md": "./reference/team-archetypes.md",
+    "skills/knowme-project-setup/references/privacy-and-publishing.md": "./reference/privacy-and-publishing.md",
+    "references/privacy-and-publishing.md": "./reference/privacy-and-publishing.md",
+    "skills/knowme-project-setup/references/lessons.md": "./reference/lessons.md",
+    "references/lessons.md": "./reference/lessons.md",
+    "skills/knowme-project-setup/SKILL.md": "./skill-contract.md"
+  }
+}

@@ -1,17 +1,19 @@
 name: Docs
 
 # Builds the Docusaurus site in website/ and publishes it to GitHub Pages:
-# https://__OWNER_LC__.github.io/__REPO__/
+# https://know-me-tools.github.io/know-me-project-management/
 on:
   push:
     branches: [main]
     paths:
-      - '__SOURCE_PATH__'   # one line per public source in content-sources.json, e.g. 'docs/**', 'README.md'
+      - 'README.md'
+      - 'skills/**'
       - 'website/**'
       - '.github/workflows/docs.yml'
   pull_request:
     paths:
-      - '__SOURCE_PATH__'   # one line per public source in content-sources.json, e.g. 'docs/**', 'README.md'
+      - 'README.md'
+      - 'skills/**'
       - 'website/**'
       - '.github/workflows/docs.yml'
   workflow_dispatch:
@@ -48,8 +50,8 @@ jobs:
 
       - name: Build (sync, sanitize, docusaurus build)
         env:
-          SITE_URL: ${{ steps.pages.outputs.origin || 'https://__OWNER_LC__.github.io' }}
-          BASE_URL: ${{ steps.pages.outputs.base_path && format('{0}/', steps.pages.outputs.base_path) || '/__REPO__/' }}
+          SITE_URL: ${{ steps.pages.outputs.origin || 'https://know-me-tools.github.io' }}
+          BASE_URL: ${{ steps.pages.outputs.base_path && format('{0}/', steps.pages.outputs.base_path) || '/know-me-project-management/' }}
         run: npm run build
 
       - name: Reject private material in the output

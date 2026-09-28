@@ -1,21 +1,19 @@
-// Template: replace every __PLACEHOLDER__. Keep markdown.format 'detect' (synced .md is CommonMark)
-// and indexBlog:false (no blog). See references/stages.md stage 9.
 import {themes as prismThemes} from 'prism-react-renderer';
 
 
-const REPO = 'https://github.com/__OWNER__/__REPO__';
+const REPO = 'https://github.com/Know-Me-Tools/know-me-project-management';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '__SITE_NAME__',
-  tagline: '__TAGLINE__',
+  title: 'KnowMe Project Setup',
+  tagline: 'Set up or convert any project into the KnowMe working structure.',
   favicon: 'img/favicon.svg',
-  url: process.env.SITE_URL ?? 'https://__OWNER_LC__.github.io',
-  baseUrl: process.env.BASE_URL ?? '/__REPO__/',
+  url: process.env.SITE_URL ?? 'https://know-me-tools.github.io',
+  baseUrl: process.env.BASE_URL ?? '/know-me-project-management/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
-  organizationName: '__OWNER__',
-  projectName: '__REPO__',
+  organizationName: 'Know-Me-Tools',
+  projectName: 'know-me-project-management',
   markdown: {
     mermaid: true,
     // The synced repository docs are plain Markdown (they contain `<`, `{port}`
@@ -48,15 +46,14 @@ const config = {
     ],
   ],
   themeConfig: {
-    image: 'img/og.png',
     colorMode: {defaultMode: 'dark', respectPrefersColorScheme: true},
     navbar: {
-      title: '__SITE_NAME__',
+      title: 'KnowMe Project Setup',
       logo: {alt: 'KnowMe', src: 'img/logo.svg', width: 32, height: 32},
       items: [
         {type: 'docSidebar', sidebarId: 'docs', label: 'Docs', position: 'left'},
-        // __EXTRA_NAV_ITEMS__ e.g. {to: '/docs/playbook', label: 'Playbook', position: 'left'},
-        //   standalone static pages: {href: 'pathname:///architecture/report.html', label: 'Report', position: 'left'},
+        {to: '/docs/guide', label: 'Every step', position: 'left'},
+        {to: '/docs/reference/stages', label: 'Reference', position: 'left'},
         {href: REPO, label: 'GitHub', position: 'right'},
       ],
     },
@@ -66,7 +63,8 @@ const config = {
           title: 'Documentation',
           items: [
             {label: 'Overview', to: '/docs/'},
-            // __EXTRA_FOOTER_DOC_LINKS__
+            {label: 'Every step, explained', to: '/docs/guide'},
+            {label: 'Stage contracts', to: '/docs/reference/stages'},
           ],
         },
         {
@@ -77,7 +75,7 @@ const config = {
           ],
         },
       ],
-      copyright: `__COPYRIGHT_OWNER__ © ${new Date().getFullYear()}`,
+      copyright: `KnowMe, LLC · AI that understands you. © ${new Date().getFullYear()}`,
     },
     mermaid: {theme: {light: 'neutral', dark: 'dark'}},
     prism: {theme: prismThemes.github, darkTheme: prismThemes.dracula, additionalLanguages: ['rust', 'toml']},

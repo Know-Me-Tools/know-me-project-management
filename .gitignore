@@ -1,2 +1,36 @@
 .DS_Store
 node_modules/
+
+# >>> knowme-project-setup >>>
+# Managed by knowme-project-setup. Edit outside this block.
+# Tracked on purpose: .kbd-orchestrator/ (KBD state) and .prometheus/ (knowledge logs).
+
+# KBD / Prometheus runtime-only files
+.kbd-orchestrator/worktrees/
+.prometheus/.writer.lock
+.prometheus/.review-pending
+.claude/settings.json.bak.*
+.claude/settings.local.json
+
+# Agent-team local coordination state (prompts, evidence, recovery copies)
+/.agent-team/state.json
+/.agent-team/recovery/
+
+# Docs site generated content
+/website/build/
+/website/.docusaurus/
+
+# Secrets and keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*_ed25519
+*.ed25519
+
+# OS / editors
+.DS_Store
+.idea/
+*.swp
+# <<< knowme-project-setup <<<

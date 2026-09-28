@@ -24,3 +24,10 @@ Each entry is a failure that happened, and the fix this skill now applies automa
 | 18 | The repo turned out to be public, and `docs/sessions/` held personal transcripts | Stage 0 reads visibility; stage 5 ignores private paths before the first commit |
 | 19 | The automatic shell safety check failed several times in a row | Stages are idempotent and can be re-run; hand the user `! <command>` lines for anything left pending |
 | 20 | A `/plan` request required approval before any work | This skill states the mode, type and stages first, and asks before outward-facing actions |
+| 21 | Building this repo's own site: the scaffold's `sidebars.js` defines `tutorialSidebar`, but the config uses `docs`, so every page failed to render | The kit ships `sidebars.js`; stage 9 replaces the scaffold's |
+| 22 | `SKILL.md` has its own YAML frontmatter, so a synced page would get two blocks | `sync-docs.mjs` drops the source frontmatter when the site supplies one (or `stripFrontmatter: true`) |
+| 23 | The kit's workflow path filters and Dockerfile assumed public sources live in `docs/` | `__SOURCE_PATH__` and `__PUBLIC_SOURCE__` placeholders, filled from `content-sources.json` |
+| 24 | The mixed `@docusaurus/*` versions from lesson 11 appeared again on a fresh scaffold | Confirmed: the override step in stage 9 is required every time, not a one-off |
+| 25 | The config loaded the search plugin with `require.resolve(...)`, which put the builder's absolute path (a username on local builds) into the site's JavaScript | The config template names plugins by package name; the output scan looks for real home paths |
+| 26 | The docs-site verify gate rejects any `.prometheus/` text, so docs that describe the structure always fail it | Stage 9 treats that match as expected for such projects and relies on the home-path and key scan instead |
+

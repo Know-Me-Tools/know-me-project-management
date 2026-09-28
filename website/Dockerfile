@@ -1,7 +1,7 @@
 # Immutable, non-root container for the documentation site.
 # Build from the repository root (the site syncs public sources from the repo):
-#   docker build -f website/Dockerfile -t __REPO__-docs .
-#   docker run --rm --read-only --tmpfs /tmp -p 8080:8080 __REPO__-docs
+#   docker build -f website/Dockerfile -t know-me-project-management-docs .
+#   docker run --rm --read-only --tmpfs /tmp -p 8080:8080 know-me-project-management-docs
 # Served at http://localhost:8080/ (BASE_URL=/ inside the container).
 
 FROM node:22-alpine AS build
