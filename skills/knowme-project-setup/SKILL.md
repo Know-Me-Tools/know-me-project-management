@@ -1,7 +1,7 @@
 ---
 name: knowme-project-setup
 description: Set up or convert any project (code, business process, skill development, research or docs) into the KnowMe working structure - git and GitHub, OpenSpec for a multi-harness agent fleet, KBD orchestration, Prometheus context bootstrap (AGENTS.md with CLAUDE.md symlink, hooks, .prometheus knowledge logs), an agent team with product-manager and UI/UX roles, local UI/design skills, and a branded Docusaurus site on GitHub Pages. Use for greenfield initialization or brownfield conversion/upgrade of an existing repository.
-license: Apache-2.0
+license: MIT
 compatibility: Requires git, Node.js 22+, and the openspec CLI. GitHub stages need gh. Uses the kbd-init, kbd-status, prometheus-context-bootstrap, agent-team-creator and build-branded-docusaurus skills and the prometheus CLI when present; each stage stops with a clear message when its dependency is missing.
 metadata:
   version: "1.0.0"

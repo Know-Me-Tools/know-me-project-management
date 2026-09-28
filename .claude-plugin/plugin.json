@@ -4,5 +4,5 @@
   "description": "Greenfield setup or brownfield conversion of any project into the KnowMe structure.",
   "author": {"name": "KnowMe, LLC", "url": "https://know-me.tools"},
   "homepage": "https://github.com/Know-Me-Tools/know-me-project-management",
-  "license": "Apache-2.0"
+  "license": "MIT"
 }
