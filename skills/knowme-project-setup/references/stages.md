@@ -55,6 +55,7 @@ Written first to `CLAUDE.md` if nothing exists. Stage 6 moves it into `AGENTS.md
 
 **Why:** a phase → change → task lifecycle, with waypoints and progress ledgers that survive tool switches (Claude to Codex to OpenCode) and compaction.
 
+0. Use the current skill pack. Run `export KBD_ORCHESTRATOR_ROOT=$HOME/.prometheus/plugins/prometheus-skill-pack/current/skills/kbd-process-orchestrator`, check that `shared/lib/{hooks,stage-gate,waypoint}.sh` exist, and compare the active generation with the skill-pack `origin/main`. Upgrade from a clean `origin/main` worktree with `./install.sh --profile skills --targets detected --non-interactive --yes`, then `--verify`. Never fall back to cached plugin versions.
 1. Run `/kbd-init`. It discovers the name, stack and commands, and writes `.kbd-orchestrator/project.json` and `constraints.md`. Run its validator: `node <kbd-init>/scripts/kbd-init-validate.mjs <P>`.
 2. `prometheus kbd migrate --check`. If it reports `journalMigrationRequired`, progress files or alias conflicts, run `prometheus kbd migrate --apply` (backups go where the tool reports).
 3. `prometheus kbd status` initializes or reads the canonical runtime and writes `.prometheus/project.json` (`projectId` plus `repositoryFingerprint`). **Track that file.**
